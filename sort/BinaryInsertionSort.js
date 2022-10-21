@@ -21,4 +21,4 @@ function binaryInsertSort(arr){
     return arr;
 }
 var mas = [546, 35456, 235346675, 3245]
-console.log(binaryInsertSort(mas));
+console.log(binaryInsertSort(mas));   

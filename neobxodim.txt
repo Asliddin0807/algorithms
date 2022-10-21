@@ -1,0 +1,4 @@
+1.Asinxronniye func(call-back, promis)
+2.Zamikaniya
+3.prototype nasledovaaiya
+4.Rabota s sobityami

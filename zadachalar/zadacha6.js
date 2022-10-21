@@ -5,6 +5,9 @@ class Book{
         this.author = author;
         this.pubisher = pubisher;
     }
+    namesA(){
+       console.log(this.names);
+    }
     set names(v){
         if(v == 'string'){
             return v;
@@ -57,7 +60,6 @@ function bookSort(n){
         if(n == list[i]){
             console.log(list);
         }
-       
    }
 }
-bookSort(book.name);
+bookSort(book.author);

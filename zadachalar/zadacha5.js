@@ -36,11 +36,18 @@ class TestDate{
     constructor(name){
         this.name = name;
     }
+   
+   set testOy(v){
+      let a = new Date(v);
+      a.oys();
+      
+    }
+    get testOy(){
+        return this.testOy;
+    }
 }
 
 let date = new TestDate('12')
-date.kuns = 13;
-date.oys = 11;
-date.yils = 2020;
-console.log(date.kuns+'/'+date.oys+'/'+date.yils)
 
+date.testOy = 11;
+console.log(date.testOy());

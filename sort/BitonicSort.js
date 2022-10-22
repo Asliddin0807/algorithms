@@ -9,24 +9,26 @@ function compAndSwap(a, i, j, dir){
 function bitonicMerge(a, low, cnt, dir){
     if(cnt > 1){
         let k = cnt / 2;
-        for(let i = low; i < low; i++){
+        for(let i = low; i < low + k; i++){
             compAndSwap(a, i, i + k, dir);
         }
         bitonicMerge(a, low, k, dir);
         bitonicMerge(a, low + k, k, dir);
+        
     }
 
 }
-function bitonicSort(a, low, cnt, dir){
- if(cnt > 1){
-    let k = parseInt(cnt / 2);
+function bitonicSort(a, low, cntt, dir){
+   if(cntt > 1){
+    var k = cntt / 2;
     bitonicSort(a, low, k, 1);
     bitonicSort(a, low + k, k, 0);
-    bitonicSort(a, low, cnt, dir);
- }
+    bitonicMerge(a, low, cntt, dir);
+    }
+   
 }
-function sort(a, n, up){
-   bitonicSort(a, 1, n, up);
+function sort(a, N, up){
+   bitonicSort(a, 0, N, up);
 }
 function printSort(arr){
    let n = arr.length;
@@ -34,7 +36,8 @@ function printSort(arr){
       console.log(arr[i])
     }
 }
-let mas = [4,2,2];
-let up = 2;
-sort(mas, mas.length, up)
+let mas = [9,8,7,6,5,4,3,2];
+let up = 1;
+sort(mas,mas.length, up)
+printSort(mas);
 
